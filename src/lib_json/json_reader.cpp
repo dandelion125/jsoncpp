@@ -33,6 +33,9 @@
 #include <stdio.h>
 
 #if defined(_MSC_VER)
+#ifdef _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES
+#undef _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES
+#endif
 #define _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES 1
 #if !defined(snprintf)
 #define snprintf _snprintf
